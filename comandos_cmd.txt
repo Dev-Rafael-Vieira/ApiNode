@@ -1,0 +1,16 @@
+npm init -y
+//cria um arquivo chamado package.json
+
+npm install express
+// intala o express biblioteca responsavel por gerenciar as rotas e as views
+
+node server.js
+// sobe o servidor na maquina
+
+npm install -D nodemon
+// instala o nodemon biblioteca responsavel por gerenciar o hot reload o "-D" significa que ser� instalada somente em desenvolvimento
+
+*no arquivo package.json dentro dos scripts adiciona-se a linha :
+"dev": "nodemon server.js"
+// onde "dev" � o nome que escolhemos para o comando criado e "nodemon server.js" refere-se ao comando que ser� implementado
+// para chamar o comando no terminal � dado o comando: "npm run dev" sem aspas e apartir de agora o node ser� restartado toda vez que for taualizado o c�digo
