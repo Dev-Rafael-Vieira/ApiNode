@@ -12,5 +12,26 @@ npm install -D nodemon
 
 *no arquivo package.json dentro dos scripts adiciona-se a linha :
 "dev": "nodemon server.js"
-// onde "dev" � o nome que escolhemos para o comando criado e "nodemon server.js" refere-se ao comando que ser� implementado
-// para chamar o comando no terminal � dado o comando: "npm run dev" sem aspas e apartir de agora o node ser� restartado toda vez que for taualizado o c�digo
+// onde "dev" é o nome que escolhemos para o comando criado e "nodemon server.js" refere-se ao comando que será implementado
+// para chamar o comando no terminal é dado o comando: "npm run dev" sem aspas e apartir de agora o node será restartado toda vez que for taualizado o código
+
+sudo docker pull mongo
+// comando no ubuntu para baixar a imagem do mongo na pull para subir o banco de dados 
+
+sudo docker run --name mongo -p 27017:27017 -d mongo
+// comando sobe a imagem para rodar no container e seta a port da maquina local 27017 para acessar a porta do container tambem com 27017 -d designa a imagem que irá rodar
+
+sudo docker ps
+// lista os containeres
+
+Download do Robomongo Robo3t
+//assistente de interface grafica que permite aconpanhar o banco de dados e visualizar os inserts
+
+docker start nomedaimagem
+//sobe o container novamente de pois de ter fechado o terminal
+
+npm install mongoose
+// instala uma dependencia de 'orm' de bancos não relacionais oub seja ele incapsula a logica das operações do banco de dados atraves do codigo 
+
+npm install require-dir
+// biblioteca responsavel por fazer a requisição de arquivos dentro da pasta model 

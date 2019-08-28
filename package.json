@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "author": "Rafael J. Vieira",
   "license": "ISC",
@@ -14,5 +15,14 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Dev-Rafael-Vieira/ApiNode.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Dev-Rafael-Vieira/ApiNode/issues"
+  },
+  "homepage": "https://github.com/Dev-Rafael-Vieira/ApiNode#readme"
 }
