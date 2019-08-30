@@ -6,7 +6,8 @@ const Product = mongoose.model('Product'); // importa o modelo Product
 module.exports = {
     //pega os produtos
     async index(req, res) {
-        const products = await Product.find();// products recebe um find ***que poderia receber um paramtro  como where***
+        const { page = 1 } = req.query; //recebe parametro do metodo GET passada na url(?page=2), caso não exista recebe um valor default
+        const products = await Product.paginate({}, {page, limit: 10});// Products recebe condição no primeiro parâmetro (ex. where) e as caracteristicas de pagina definidas por mongoosePaginate
 
         return res.json(products); // retorna um JSON
     },

@@ -35,3 +35,27 @@ npm install mongoose
 
 npm install require-dir
 // biblioteca responsavel por fazer a requisição de arquivos dentro da pasta model 
+
+npm install mongoose-paginate
+//biblioteca responsável por trazer as requisições já paginadas do banco de dados
+
+          
+          
+            
+            ***configuração final das requisições do insomnia***
+            
+1: index, metodo GET - http://localhost:3001/api/products?page=2
+
+2: show, metodo GET - http://localhost:3001/api/products/5d68e58de9432120e2350cc3 - o ultimo parametro é o id 
+
+3: create, metodo POST - http://localhost:3001/api/products
+corpo da requisição:
+{
+	"title": "ReactJS99",
+	"description":"Biblioteca de  javascript para aplicações interativas ",
+	"url": "http://github.com/facebook/react-native"
+}
+
+4: update, metodo PUT - http://localhost:3001/api/products/5d68e58de9432120e2350cc3 - o ultimo parametro é o id 
+
+5: delete, metodo DELETE - http://localhost:3001/api/products/5d68e58de9432120e2350cc3 - o ultimo parametro é o id 

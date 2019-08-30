@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate');
 
 //controi um esquema que será passado ao banco de dados 
 const ProductSchema = new mongoose.Schema({
@@ -21,6 +22,9 @@ const ProductSchema = new mongoose.Schema({
     },
 
 });
+
+// adiciona o plugin do mongoosePaginate ao ProductSchema para que ele seja envocado posteriormente
+ProductSchema.plugin(mongoosePaginate);
 
 // registra o model Product na aplicação  
 mongoose.model('Product', ProductSchema);
