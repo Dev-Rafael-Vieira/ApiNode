@@ -22,7 +22,7 @@ const ProductSchema = new mongoose.Schema({
     },
 
 });
-
+ 
 // adiciona o plugin do mongoosePaginate ao ProductSchema para que ele seja envocado posteriormente
 ProductSchema.plugin(mongoosePaginate);
 

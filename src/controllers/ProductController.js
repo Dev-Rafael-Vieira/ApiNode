@@ -11,7 +11,7 @@ module.exports = {
 
         return res.json(products); // retorna um JSON
     },
-
+ 
     async show(req, res){
         const products = await Product.findById(req.params.id); // pega o parametro id 
 

@@ -28,7 +28,7 @@ Download do Robomongo Robo3t
 //assistente de interface grafica que permite aconpanhar o banco de dados e visualizar os inserts
 
 docker start nomedaimagem
-//sobe o container novamente de pois de ter fechado o terminal
+//sobe o container novamente de pois de ter fechado o terminal 
 
 npm install mongoose
 // instala uma dependencia de 'orm' de bancos não relacionais oub seja ele incapsula a logica das operações do banco de dados atraves do codigo 
@@ -43,7 +43,7 @@ npm install mongoose-paginate
           
             
             ***configuração final das requisições do insomnia***
-            
+
 1: index, metodo GET - http://localhost:3001/api/products?page=2
 
 2: show, metodo GET - http://localhost:3001/api/products/5d68e58de9432120e2350cc3 - o ultimo parametro é o id 
