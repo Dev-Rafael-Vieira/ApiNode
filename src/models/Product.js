@@ -22,5 +22,5 @@ const ProductSchema = new mongoose.Schema({
 
 });
 
-// registra o model Product na aplicação 
+// registra o model Product na aplicação  
 mongoose.model('Product', ProductSchema);

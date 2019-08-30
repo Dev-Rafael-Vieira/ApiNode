@@ -1,6 +1,6 @@
 const express = require('express'); // importa a biblioteca express
 const mongoose = require('mongoose'); // importa a biblioteca mongoose
-const requireDir = require('require-dir');
+const requireDir = require('require-dir'); // importa a biblioteca require-dir
 
 
 //inicia o app
@@ -10,23 +10,12 @@ const app = express(); // atribui a biblioteca a uma contante para manipular
 mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true}); // 'mongodb://user@passworld'
 
 //importa o esquema dos produtos do banco de dados
-//require('./src/models/Product');
+//require('./src/models/Product'); //versão sem a biblioteca require-dir
 requireDir("./src/models");// a biblioteca require-dir permite apontar somente para a pasta models
 
-//acessa o model Product para inserir valores no banco de dados
-const Product = mongoose.model('Product');
 
 
-// trata qual será a resposta da requisição GET a pagina
-app.get('/', (req, res) => {
-    //cria um produto para ser inserido no banco de dados
-    Product.create({
-        title: 'React Native',
-        description: 'Build native apps with React',
-        url: "http://github.com/facebook/react-native"
-     });
-    
-    return res.send("hello world !");
-});
+//roteia as requisições que batem em '/api' e envia para './src/routes' sejam elas GET, POST, PUT ou DELETE
+app.use('/api', require('./src/routes'));
 
 app.listen(3001);// declara qual porta sera ouvida
