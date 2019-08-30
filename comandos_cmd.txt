@@ -37,9 +37,10 @@ npm install require-dir
 // biblioteca responsavel por fazer a requisição de arquivos dentro da pasta model 
 
 npm install mongoose-paginate
-//biblioteca responsável por trazer as requisições já paginadas do banco de dados
+//biblioteca responsavel por trazer as requisições já paginadas do banco de dados
 
-          
+npm intall cors
+//biblioteca responsavel por liberar o acesso da aplicação a IPs externos
           
             
             ***configuração final das requisições do insomnia***
