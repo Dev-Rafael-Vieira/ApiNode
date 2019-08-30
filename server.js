@@ -6,6 +6,8 @@ const requireDir = require('require-dir'); // importa a biblioteca require-dir
 //inicia o app
 const app = express(); // atribui a biblioteca a uma contante para manipular
 
+app.use(express.json()); //permite o envio de dados para aplicação no formato de JSON
+
 // inicia o DB
 mongoose.connect("mongodb://localhost:27017/nodeapi", {useNewUrlParser: true}); // 'mongodb://user@passworld'
 
